@@ -94,7 +94,9 @@ class Game(object):
             
 
 if __name__ == '__main__':
-    number_games = '1' and sys.argv[-1]
+    number_games = 1
+    if len(sys.argv) > 1:
+        number_games = sys.argv[-1]
     game = Game(int(number_games))
     game.play()
     
